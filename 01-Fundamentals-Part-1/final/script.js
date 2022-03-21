@@ -461,17 +461,27 @@ HINT: Value X is between 50 and 300, if it's >= 50 && <= 300 😉
 GOOD LUCK 😀
 */
 
-/*
-const bill = 430;
-const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
-console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
-*/
+const bill1 = 275;
+const bill2 = 40;
+const bill3 = 430;
 
-// Challenge
+function calculateTotal(bill) {
+  const usualTip = bill >= 50 && bill <= 300 ? 0.15 : 0.2;
 
-dolphinsScore = [96, 108, 89];
-koalasScore = [97, 112, 102];
+  const total = bill + bill * usualTip;
 
-const averageDolphins =
-  dolphinsScore.reduce((prev, curr) => prev + curr) / dolphinsScore.length;
-console.log(averageDolphins.toFixed(2));
+  return total;
+}
+
+console.log(calculateTotal(bill1));
+console.log(calculateTotal(bill2));
+console.log(calculateTotal(bill3));
+
+// // Challenge
+
+// dolphinsScore = [96, 108, 89];
+// koalasScore = [97, 112, 102];
+
+// const averageDolphins =
+//   dolphinsScore.reduce((prev, curr) => prev + curr) / dolphinsScore.length;
+// console.log(averageDolphins.toFixed(2));
