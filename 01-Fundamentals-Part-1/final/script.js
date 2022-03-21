@@ -466,3 +466,12 @@ const bill = 430;
 const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
 console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
 */
+
+// Challenge
+
+dolphinsScore = [96, 108, 89];
+koalasScore = [97, 112, 102];
+
+const averageDolphins =
+  dolphinsScore.reduce((prev, curr) => prev + curr) / dolphinsScore.length;
+console.log(averageDolphins.toFixed(2));
