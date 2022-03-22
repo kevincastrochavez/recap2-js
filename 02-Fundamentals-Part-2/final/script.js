@@ -135,33 +135,39 @@ HINT: To check if number A is at least double number B, check for A >= 2 * B. Ap
 GOOD LUCK 😀
 */
 
-/*
-const calcAverage = (a, b, c) => (a + b + c) / 3;
-console.log(calcAverage(3, 4, 5));
+let msg = '';
 
-// Test 1
-let scoreDolphins = calcAverage(44, 23, 71);
-let scoreKoalas = calcAverage(65, 54, 49);
-console.log(scoreDolphins, scoreKoalas);
+const calcAverage = (scores) => {
+  const average = scores.reduce((prev, curr) => prev + curr) / scores.length;
 
-const checkWinner = function (avgDolphins, avgKoalas) {
-  if (avgDolphins >= 2 * avgKoalas) {
-    console.log(`Dolphins win 🏆 (${avgDolphins} vs. ${avgKoalas})`);
-  } else if (avgKoalas >= 2 * avgDolphins) {
-    console.log(`Koalas win 🏆 (${avgKoalas} vs. ${avgDolphins})`);
+  return average;
+};
+
+const checkWinner = (avgDolphins, avgKoalas) => {
+  if (avgDolphins === avgKoalas * 2) {
+    msg = 'Dolphins won';
+  } else if (avgKoalas === avgDolphins * 2) {
+    msg = 'Koalas won';
   } else {
-    console.log('No team wins...');
+    msg = 'Nobody won';
   }
-}
-checkWinner(scoreDolphins, scoreKoalas);
 
-checkWinner(576, 111);
+  return msg;
+};
 
-// Test 2
-scoreDolphins = calcAverage(85, 54, 41);
-scoreKoalas = calcAverage(23, 34, 27);
-console.log(scoreDolphins, scoreKoalas);
-checkWinner(scoreDolphins, scoreKoalas);
+const dolphinsAverage1 = calcAverage([44, 23, 71]);
+const dolphinsAverage2 = calcAverage([85, 54, 41]);
+const koalasAverage1 = calcAverage([65, 54, 49]);
+const koalasAverage2 = calcAverage([23, 34, 27]);
+
+const result1 = checkWinner(dolphinsAverage1, koalasAverage1);
+const result2 = checkWinner(dolphinsAverage2, koalasAverage2);
+
+console.log(result1);
+console.log(result2);
+
+/*
+
 
 
 ///////////////////////////////////////
