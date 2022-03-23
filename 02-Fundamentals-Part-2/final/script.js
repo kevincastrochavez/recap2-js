@@ -135,36 +135,36 @@ HINT: To check if number A is at least double number B, check for A >= 2 * B. Ap
 GOOD LUCK 😀
 */
 
-let msg = '';
+// let msg = '';
 
-const calcAverage = (scores) => {
-  const average = scores.reduce((prev, curr) => prev + curr) / scores.length;
+// const calcAverage = (scores) => {
+//   const average = scores.reduce((prev, curr) => prev + curr) / scores.length;
 
-  return average;
-};
+//   return average;
+// };
 
-const checkWinner = (avgDolphins, avgKoalas) => {
-  if (avgDolphins === avgKoalas * 2) {
-    msg = 'Dolphins won';
-  } else if (avgKoalas === avgDolphins * 2) {
-    msg = 'Koalas won';
-  } else {
-    msg = 'Nobody won';
-  }
+// const checkWinner = (avgDolphins, avgKoalas) => {
+//   if (avgDolphins === avgKoalas * 2) {
+//     msg = 'Dolphins won';
+//   } else if (avgKoalas === avgDolphins * 2) {
+//     msg = 'Koalas won';
+//   } else {
+//     msg = 'Nobody won';
+//   }
 
-  return msg;
-};
+//   return msg;
+// };
 
-const dolphinsAverage1 = calcAverage([44, 23, 71]);
-const dolphinsAverage2 = calcAverage([85, 54, 41]);
-const koalasAverage1 = calcAverage([65, 54, 49]);
-const koalasAverage2 = calcAverage([23, 34, 27]);
+// const dolphinsAverage1 = calcAverage([44, 23, 71]);
+// const dolphinsAverage2 = calcAverage([85, 54, 41]);
+// const koalasAverage1 = calcAverage([65, 54, 49]);
+// const koalasAverage2 = calcAverage([23, 34, 27]);
 
-const result1 = checkWinner(dolphinsAverage1, koalasAverage1);
-const result2 = checkWinner(dolphinsAverage2, koalasAverage2);
+// const result1 = checkWinner(dolphinsAverage1, koalasAverage1);
+// const result2 = checkWinner(dolphinsAverage2, koalasAverage2);
 
-console.log(result1);
-console.log(result2);
+// console.log(result1);
+// console.log(result2);
 
 /*
 
@@ -263,58 +263,55 @@ HINT: Remember that an array needs a value in each position, and that value can 
 GOOD LUCK 😀
 */
 
-const calcTip = (bill) => {
-  const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// const calcTip = (bill) => {
+//   const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 
-  return tip;
-};
+//   return tip;
+// };
 
-const bills = [125, 555, 44];
-const tips = bills.map((bill) => calcTip(bill));
-const totals = bills.map((bill, index) => bill + tips[index]);
-console.log(totals);
-
-/*
+// const bills = [125, 555, 44];
+// const tips = bills.map((bill) => calcTip(bill));
+// const totals = bills.map((bill, index) => bill + tips[index]);
+// console.log(totals);
 
 ///////////////////////////////////////
 // Introduction to Objects
-const jonasArray = [
-  'Jonas',
-  'Schmedtmann',
-  2037 - 1991,
-  'teacher',
-  ['Michael', 'Peter', 'Steven']
-];
+// const jonasArray = [
+//   'Jonas',
+//   'Schmedtmann',
+//   2037 - 1991,
+//   'teacher',
+//   ['Michael', 'Peter', 'Steven']
+// ];
 
-const jonas = {
-  firstName: 'Jonas',
-  lastName: 'Schmedtmann',
-  age: 2037 - 1991,
-  job: 'teacher',
-  friends: ['Michael', 'Peter', 'Steven']
-};
-
+// const jonas = {
+//   firstName: 'Jonas',
+//   lastName: 'Schmedtmann',
+//   age: 2037 - 1991,
+//   job: 'teacher',
+//   friends: ['Michael', 'Peter', 'Steven']
+// };
 
 ///////////////////////////////////////
 // Dot vs. Bracket Notation
-const jonas = {
-  firstName: 'Jonas',
-  lastName: 'Schmedtmann',
-  age: 2037 - 1991,
-  job: 'teacher',
-  friends: ['Michael', 'Peter', 'Steven']
-};
-console.log(jonas);
+// const jonas = {
+//   firstName: 'Jonas',
+//   lastName: 'Schmedtmann',
+//   age: 2037 - 1991,
+//   job: 'teacher',
+//   friends: ['Michael', 'Peter', 'Steven'],
+// };
+// // console.log(jonas);
 
-console.log(jonas.lastName);
-console.log(jonas['lastName']);
+// // console.log(jonas.lastName);
+// // console.log(jonas['lastName']);
 
-const nameKey = 'Name';
-console.log(jonas['first' + nameKey]);
-console.log(jonas['last' + nameKey]);
+// const nameKey = 'Name';
+// console.log(jonas['first' + nameKey]);
+// console.log(jonas['last' + nameKey]);
 
 // console.log(jonas.'last' + nameKey)
-
+/*
 const interestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends');
 
 if (jonas[interestedIn]) {

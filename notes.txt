@@ -9,3 +9,35 @@ Type coercion - Mutating the datatype
 Falsy values
 
 0, '', undefined, null, NaN
+
+
+
+Smart way of accessing arrays:
+
+const calcTip = (bill) => {
+  const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+  return tip;
+};
+
+const bills = [125, 555, 44];
+const tips = bills.map((bill) => calcTip(bill));
+const totals = bills.map((bill, index) => bill + tips[index]);
+
+
+
+Smart way of accessing objects when using similar object names
+
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
+  age: 2037 - 1991,
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven'],
+};
+
+
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+
