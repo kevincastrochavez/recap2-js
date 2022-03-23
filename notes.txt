@@ -41,3 +41,26 @@ const nameKey = 'Name';
 console.log(jonas['first' + nameKey]);
 console.log(jonas['last' + nameKey]);
 
+
+
+Objects
+When creating methods, you can store new properties with the this keyword, just remember to RETURN it with 'this'
+
+Then, you can log that property
+
+const john = {
+  fullName: 'John Smith',
+  mass: 92,
+  height: 1.95,
+
+  calcBmi() {
+    this.bmi = this.mass / this.height ** 2;
+
+    return this.bmi;
+  },
+};
+
+mark.calcBmi();
+john.calcBmi();
+
+console.log(mark.bmi);
