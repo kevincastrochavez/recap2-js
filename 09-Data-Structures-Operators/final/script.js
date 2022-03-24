@@ -634,42 +634,27 @@ TEST DATA FOR 6: Use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. Th
 GOOD LUCK 😀
 */
 
-/*
-// 1.
 const [players1, players2] = game.players;
-console.log(players1, players2);
 
-// 2.
-const [gk, ...fieldPlayers] = players1;
-console.log(gk, fieldPlayers);
+const gkTeam1 = players1[0];
+const fieldPlayersTeam1 = players1.slice(1);
 
-// 3.
-const allPlayers = [...players1, ...players2];
-console.log(allPlayers);
+const allPlayers = [players1, players2].flat();
 
-// 4.
-const players1Final = [...players1, 'Thiago', 'Coutinho', 'Periscic'];
+const players1Final = [players1, 'Thiago', 'Coutinho', 'Perisic'].flat();
 
-// 5.
-const {
-  odds: { team1, x: draw, team2 },
-} = game;
-console.log(team1, draw, team2);
+const team1 = game.odds.team1;
+const draw = game.odds.x;
+const team2 = game.odds.team2;
 
-// 6.
-const printGoals = function (...players) {
-  console.log(players);
-  console.log(`${players.length} goals were scored`);
-};
+function printGoals(...playerNames) {
+  console.log(playerNames);
+  console.log(playerNames.length);
+}
 
-// printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
-// printGoals('Davies', 'Muller');
-printGoals(...game.scored);
+console.log(printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich'));
 
-// 7.
-team1 < team2 && console.log('Team 1 is more likely to win');
-team1 > team2 && console.log('Team 2 is more likely to win');
-
+/*
 
 ///////////////////////////////////////
 // Logical Assignment Operators
