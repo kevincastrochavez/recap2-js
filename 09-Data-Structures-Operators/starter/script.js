@@ -33,13 +33,19 @@ const [first, second, third] = restaurant.categories;
 const nested = [2, 3, [4, 5]];
 const [i, j, [k, l]] = nested;
 
-console.log(i);
-console.log(j);
-console.log(k);
-console.log(l);
-
 const [p, q, r] = [8, 9];
 
-console.log(p);
-console.log(q);
-console.log(r);
+const { name, categories, mainMenu } = restaurant;
+const {
+  name: restaurantName,
+  categories: restaurantCategories,
+  mainMenu: dishes,
+} = restaurant;
+
+console.log(name);
+console.log(categories);
+console.log(mainMenu);
+
+console.log(restaurantName);
+console.log(restaurantCategories);
+console.log(dishes);
