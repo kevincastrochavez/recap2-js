@@ -37,3 +37,9 @@ console.log(i);
 console.log(j);
 console.log(k);
 console.log(l);
+
+const [p, q, r] = [8, 9];
+
+console.log(p);
+console.log(q);
+console.log(r);

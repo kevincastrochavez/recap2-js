@@ -79,6 +79,7 @@ console.log(z);
 
 
 Destructuring nested arrays:
+(When trying to destructure and there's no value matching the declared variable, returns undefined)
 
 const nested = [2, 3, [4, 5]];
 const [i, j, [k, l]] = nested;
