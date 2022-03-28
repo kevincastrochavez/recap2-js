@@ -45,5 +45,5 @@ const {
 const { menu = [], starterMenu: starters = [] } = restaurant;
 
 const {
-  fri: { open, close },
+  fri: { open: o, close: c },
 } = restaurant.openingHours;
