@@ -42,10 +42,7 @@ const {
   mainMenu: dishes,
 } = restaurant;
 
-console.log(name);
-console.log(categories);
-console.log(mainMenu);
+const { menu = [], starterMenu: starters = [] } = restaurant;
 
-console.log(restaurantName);
-console.log(restaurantCategories);
-console.log(dishes);
+console.log(menu);
+console.log(restaurant);
