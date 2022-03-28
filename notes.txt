@@ -111,3 +111,8 @@ console.log(dishes);
 
 const { menu = [], starterMenu: starters = [] } = restaurant;
 (You can define variables that the object doesn't include when you equal it to something. Also, you can set something to empty and will inherit the real value if it's not empty)
+
+const {
+  fri: { open, close },
+} = restaurant.openingHours;
+(Destructuring objects inside objects)

@@ -44,5 +44,6 @@ const {
 
 const { menu = [], starterMenu: starters = [] } = restaurant;
 
-console.log(menu);
-console.log(restaurant);
+const {
+  fri: { open, close },
+} = restaurant.openingHours;
