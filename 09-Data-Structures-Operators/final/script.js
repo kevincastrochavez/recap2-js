@@ -509,35 +509,24 @@ const game = {
   },
 };
 
-/*
-// 1.
-for (const [i, player] of game.scored.entries())
-  console.log(`Goal ${i + 1}: ${player}`);
-
-// 2.
-const odds = Object.values(game.odds);
-let average = 0;
-for (const odd of odds) average += odd;
-average /= odds.length;
-console.log(average);
-
-// 3.
-for (const [team, odd] of Object.entries(game.odds)) {
-  const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
-  console.log(`Odd of ${teamStr} ${odd}`);
+const scoredArray = game.scored;
+for (let index = 0; index < scoredArray.length; index++) {
+  console.log(`Goal ${index + 1}: ${scoredArray[index]}`);
 }
 
-// Odd of victory Bayern Munich: 1.33
-// Odd of draw: 3.25
-// Odd of victory Borrussia Dortmund: 6.5
+console.log('');
 
-// BONUS
-// So the solution is to loop over the array, and add the array elements as object properties, and then increase the count as we encounter a new occurence of a certain element
+console.log(`Odd of victory ${game.team1}: ${game.odds.team1}`);
+console.log(`Odd of draw: ${game.odds.x}`);
+console.log(`Odd of victory ${game.team2}: ${game.odds.team2}`);
+
 const scorers = {};
-for (const player of game.scored) {
-  scorers[player] ? scorers[player]++ : (scorers[player] = 1);
+
+for (let index = 0; index < scoredArray.length; index++) {
+  scorers[scoredArray[index]] = 1;
 }
-*/
+
+console.log(scorers);
 
 /*
 ///////////////////////////////////////
@@ -634,25 +623,25 @@ TEST DATA FOR 6: Use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. Th
 GOOD LUCK 😀
 */
 
-const [players1, players2] = game.players;
+// const [players1, players2] = game.players;
 
-const gkTeam1 = players1[0];
-const fieldPlayersTeam1 = players1.slice(1);
+// const gkTeam1 = players1[0];
+// const fieldPlayersTeam1 = players1.slice(1);
 
-const allPlayers = [players1, players2].flat();
+// const allPlayers = [players1, players2].flat();
 
-const players1Final = [players1, 'Thiago', 'Coutinho', 'Perisic'].flat();
+// const players1Final = [players1, 'Thiago', 'Coutinho', 'Perisic'].flat();
 
-const team1 = game.odds.team1;
-const draw = game.odds.x;
-const team2 = game.odds.team2;
+// const team1 = game.odds.team1;
+// const draw = game.odds.x;
+// const team2 = game.odds.team2;
 
-function printGoals(...playerNames) {
-  console.log(playerNames);
-  console.log(playerNames.length);
-}
+// function printGoals(...playerNames) {
+//   console.log(playerNames);
+//   console.log(playerNames.length);
+// }
 
-console.log(printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich'));
+// console.log(printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich'));
 
 /*
 
