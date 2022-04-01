@@ -37,31 +37,54 @@ const restaurant = {
       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
     );
   },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here's your delicious pasta with ${ing1}, ${ing2} and ${ing3}`
+    );
+  },
 };
 
-const [first, second, third] = restaurant.categories;
+// const [first, second, third] = restaurant.categories;
 
-const nested = [2, 3, [4, 5]];
-const [i, j, [k, l]] = nested;
+// const nested = [2, 3, [4, 5]];
+// const [i, j, [k, l]] = nested;
 
-const [p, q, r] = [8, 9];
+// const [p, q, r] = [8, 9];
 
-const { name, categories, mainMenu } = restaurant;
-const {
-  name: restaurantName,
-  categories: restaurantCategories,
-  mainMenu: dishes,
-} = restaurant;
+// const { name, categories, mainMenu } = restaurant;
+// const {
+//   name: restaurantName,
+//   categories: restaurantCategories,
+//   mainMenu: dishes,
+// } = restaurant;
 
-const { menu = [], starterMenu: starters = [] } = restaurant;
+// const { menu = [], starterMenu: starters = [] } = restaurant;
 
-const {
-  fri: { open: o, close: c },
-} = restaurant.openingHours;
+// const {
+//   fri: { open: o, close: c },
+// } = restaurant.openingHours;
 
-restaurant.orderDelivery({
-  time: '22:30',
-  address: 'Via del Sole, 21',
-  mainIndex: 2,
-  starterIndex: 2,
-});
+// restaurant.orderDelivery({
+//   time: '22:30',
+//   address: 'Via del Sole, 21',
+//   mainIndex: 2,
+//   starterIndex: 2,
+// });
+
+const arr = [1, 2, 3];
+const newArray = [...arr, 4, 5];
+
+const mainMenuCopy = [...restaurant.mainMenu];
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+const str = 'Kevin';
+const letters = [...str, ' ', 'C'];
+
+const ingredients = [
+  prompt('Ingredient 1?'),
+  prompt('Ingredient 2?'),
+  prompt('Ingredient 3?'),
+];
+
+restaurant.orderPasta(...ingredients);

@@ -116,3 +116,17 @@ const {
   fri: { open, close },
 } = restaurant.openingHours;
 (Destructuring objects inside objects)
+
+
+
+Spread Operator
+
+Copying arrays - 
+const mainMenuCopy = [...restaurant.mainMenu];
+
+Joining arrays -
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+Works with strings and any iterable (but not Objects)
+const str = 'Kevin';
+const kevin = [...str, ' ', 'C'];
