@@ -89,12 +89,17 @@ const restaurant = {
 
 // restaurant.orderPasta(...ingredients);
 
-// SPREAD on RIGHT
-const arr = [1, 2, ...[3, 4]];
-console.log(arr);
+// // SPREAD on RIGHT
+// const arr = [1, 2, ...[3, 4]];
+// console.log(arr);
 
-// REST on LEFT
-const [a, b, ...others] = [1, 2, 3, 4, 5];
-console.log(a);
-console.log(b);
-console.log(others);
+// // REST on LEFT
+// const [a, b, ...others] = [1, 2, 3, 4, 5];
+// console.log(a);
+// console.log(b);
+// console.log(others);
+
+// REST with objects
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(sat);
+console.log(weekdays);
