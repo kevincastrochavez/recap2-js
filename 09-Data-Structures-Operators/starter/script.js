@@ -72,19 +72,29 @@ const restaurant = {
 //   starterIndex: 2,
 // });
 
-const arr = [1, 2, 3];
-const newArray = [...arr, 4, 5];
+// const arr = [1, 2, 3];
+// const newArray = [...arr, 4, 5];
 
-const mainMenuCopy = [...restaurant.mainMenu];
-const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// const mainMenuCopy = [...restaurant.mainMenu];
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
-const str = 'Kevin';
-const letters = [...str, ' ', 'C'];
+// const str = 'Kevin';
+// const letters = [...str, ' ', 'C'];
 
-const ingredients = [
-  prompt('Ingredient 1?'),
-  prompt('Ingredient 2?'),
-  prompt('Ingredient 3?'),
-];
+// const ingredients = [
+//   prompt('Ingredient 1?'),
+//   prompt('Ingredient 2?'),
+//   prompt('Ingredient 3?'),
+// ];
 
-restaurant.orderPasta(...ingredients);
+// restaurant.orderPasta(...ingredients);
+
+// SPREAD on RIGHT
+const arr = [1, 2, ...[3, 4]];
+console.log(arr);
+
+// REST on LEFT
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+console.log(a);
+console.log(b);
+console.log(others);

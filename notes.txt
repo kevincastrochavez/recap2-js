@@ -130,3 +130,14 @@ const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 Works with strings and any iterable (but not Objects)
 const str = 'Kevin';
 const kevin = [...str, ' ', 'C'];
+
+
+// SPREAD on RIGHT
+const arr = [1, 2, ...[3, 4]];
+console.log(arr);
+
+// REST on LEFT
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+console.log(a);
+console.log(b);
+console.log(others);
