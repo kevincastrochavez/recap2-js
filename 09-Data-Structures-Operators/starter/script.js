@@ -99,7 +99,17 @@ const restaurant = {
 // console.log(b);
 // console.log(others);
 
-// REST with objects
-const { sat, ...weekdays } = restaurant.openingHours;
-console.log(sat);
-console.log(weekdays);
+// // REST with objects
+// const { sat, ...weekdays } = restaurant.openingHours;
+// console.log(sat);
+// console.log(weekdays);
+
+const add = (...numbers) => {
+  console.log(numbers);
+};
+
+const restNumbers = [10, 11, 12];
+
+add(2, 3, 4);
+add(4, 8, 30, 91);
+add(...restNumbers);
