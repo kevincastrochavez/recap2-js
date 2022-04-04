@@ -43,6 +43,11 @@ const restaurant = {
       `Here's your delicious pasta with ${ing1}, ${ing2} and ${ing3}`
     );
   },
+
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  },
 };
 
 // const [first, second, third] = restaurant.categories;
@@ -104,12 +109,14 @@ const restaurant = {
 // console.log(sat);
 // console.log(weekdays);
 
-const add = (...numbers) => {
-  console.log(numbers);
-};
+// const add = (...numbers) => {
+//   console.log(numbers);
+// };
 
-const restNumbers = [10, 11, 12];
+// const restNumbers = [10, 11, 12];
 
-add(2, 3, 4);
-add(4, 8, 30, 91);
-add(...restNumbers);
+// add(2, 3, 4);
+// add(4, 8, 30, 91);
+// add(...restNumbers);
+
+restaurant.orderPizza('pepperoni', 'mushrooms', 'onion', 'pineapple');
