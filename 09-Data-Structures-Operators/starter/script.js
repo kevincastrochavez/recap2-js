@@ -119,4 +119,18 @@ const restaurant = {
 // add(4, 8, 30, 91);
 // add(...restNumbers);
 
-restaurant.orderPizza('pepperoni', 'mushrooms', 'onion', 'pineapple');
+// restaurant.orderPizza('pepperoni', 'mushrooms', 'onion', 'pineapple');
+
+console.log(3 || 'Kevin');
+console.log('' || 'Kevin');
+console.log(true || 0);
+console.log(undefined || null);
+console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+// Even though it never was declared or defined
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+
+restaurant.numGuests2 = 23;
+const guests2 = restaurant.numGuests2 ? restaurant.numGuests2 : 10;
+console.log(guests2);
