@@ -141,3 +141,20 @@ const [a, b, ...others] = [1, 2, 3, 4, 5];
 console.log(a);
 console.log(b);
 console.log(others);
+
+
+
+
+&& or || operators
+
+(Logs the first truthy value)
+// console.log(3 || 'Kevin');
+// console.log('' || 'Kevin');
+// console.log(true || 0);
+// console.log(undefined || null);
+// console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+(Logs the last value if the rest of them are true. If not, logs the falsy value)
+console.log(0 && 'Kevin');
+console.log(10 && 'Kevin');
+console.log('Hello' && 10 && null && 'Kevin');
