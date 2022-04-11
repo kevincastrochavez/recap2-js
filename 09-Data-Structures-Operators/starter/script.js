@@ -135,13 +135,23 @@ const restaurant = {
 // const guests2 = restaurant.numGuests2 ? restaurant.numGuests2 : 10;
 // console.log(guests2);
 
-console.log(0 && 'Kevin');
-console.log(10 && 'Kevin');
-console.log('Hello' && 10 && null && 'Kevin');
+// console.log(0 && 'Kevin');
+// console.log(10 && 'Kevin');
+// console.log('Hello' && 10 && null && 'Kevin');
 
-if (restaurant.orderPizza) {
-  restaurant.orderPizza('mushrooms', 'spinach');
-}
+// if (restaurant.orderPizza) {
+//   restaurant.orderPizza('mushrooms', 'spinach');
+// }
 
-// Shortcut for if statements
-restaurant.orderPizza && restaurant.orderPizza('cheese', 'pastor');
+// // Shortcut for if statements
+// restaurant.orderPizza && restaurant.orderPizza('cheese', 'pastor');
+
+// Nullish Coalescing operator
+// If the first value Null or undefined, executes the second value
+// NOT for '' or 0
+restaurant.numGuests = 0;
+restaurant.numGuests2 = null;
+const guestCorrect = restaurant.numGuests ?? 10;
+const guestCorrect2 = restaurant.numGuests2 ?? 10;
+console.log(guestCorrect);
+console.log(guestCorrect2);
