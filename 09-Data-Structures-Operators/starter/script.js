@@ -146,12 +146,48 @@ const restaurant = {
 // // Shortcut for if statements
 // restaurant.orderPizza && restaurant.orderPizza('cheese', 'pastor');
 
-// Nullish Coalescing operator
-// If the first value Null or undefined, executes the second value
-// NOT for '' or 0
-restaurant.numGuests = 0;
-restaurant.numGuests2 = null;
-const guestCorrect = restaurant.numGuests ?? 10;
-const guestCorrect2 = restaurant.numGuests2 ?? 10;
-console.log(guestCorrect);
-console.log(guestCorrect2);
+// // Nullish Coalescing operator
+// // If the first value Null or undefined, executes the second value
+// // NOT for '' or 0
+// restaurant.numGuests = 0;
+// restaurant.numGuests2 = null;
+// const guestCorrect = restaurant.numGuests ?? 10;
+// const guestCorrect2 = restaurant.numGuests2 ?? 10;
+// console.log(guestCorrect);
+// console.log(guestCorrect2);
+
+const rest1 = {
+  name: 'Pizza Pie',
+  // numGuests: 20,
+  numGuests: 0,
+};
+
+const rest2 = {
+  name: 'La Piazza',
+  owner: 'Kevin C',
+};
+
+// LOGICAL ASSIGNMENT OPERATORS
+
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuests = rest2.numGuests || 10;
+
+// OR assignment operator
+// Returns the truthy value, but 0 is still falsy
+// rest1.numGuests ||= 10;
+// rest2.numGuests ||= 10;
+
+// Nullish assignment operator
+// Returns the truthy value (even 0 or '')
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
+
+// rest1.owner = rest1.owner && 'ANONYMOUS';
+// rest2.owner = rest2.owner && 'ANONYMOUS';
+
+// It does not return undefined when it's falsy
+rest1.owner &&= 'ANONYMOUS';
+rest2.owner &&= 'ANONYMOUS';
+
+console.log(rest1);
+console.log(rest2);
